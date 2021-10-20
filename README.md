@@ -72,7 +72,7 @@ int main()
     if (a<=59) printf("D");
 }
 ```
-## 判竒偶
+## 判奇偶
 ```C
 #include <stdio.h>
 int main()
