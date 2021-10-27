@@ -143,15 +143,21 @@ int main()
 #include <stdio.h>
 int main()
 {
-    int n;
-    for(n=0;n<=3;n++)
+    ///最簡單的基礎型 電腦
+    for(int i=0;i<4;i++)
     {
-        printf("有幾次呢?\n");
-    }///會跑4次
+        printf("i:%d\n",i);
+    }///會跑4次: 0 1 2 3
 
-    for(int n=0;n<3;n++)
+    ///最簡單的基礎型 人類數數字
+    for(int i=1;i<=4;i++)
     {
-        printf("老師推薦的寫法,有幾次?\n");
-    }///會跑3次
+        printf("人類的數法i:%d\n",i);
+    }///會跑4次: 1 2 3 4
+
+    for(int i=0;i<=4;i++)
+    {
+        printf("怪怪的.. %d\n",i);
+    }///怪怪的,可以從基礎型走過來
 }
 ```
