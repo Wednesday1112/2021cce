@@ -137,3 +137,21 @@ int main()
     }
 }
 ```
+
+## for的寫法
+```C
+#include <stdio.h>
+int main()
+{
+    int n;
+    for(n=0;n<=3;n++)
+    {
+        printf("有幾次呢?\n");
+    }///會跑4次
+
+    for(int n=0;n<3;n++)
+    {
+        printf("老師推薦的寫法,有幾次?\n");
+    }///會跑3次
+}
+```
