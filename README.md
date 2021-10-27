@@ -110,3 +110,30 @@ int main()
 	else if (a*a+b*b>c*c) printf("銳角");
 }
 ```
+
+# 第七週
+## 迴圈 while
+```C
+#include <stdio.h>
+int main()
+{
+    int n=2;
+    while(n>0)
+    {
+        printf("n大於0\n");
+        n=n-1;
+    }
+}
+```
+
+## 迴圈 for
+```C
+#include <stdio.h>
+int main()
+{
+    for(int n=2;n>0;n--)
+    {
+        printf("n大於0\n");
+    }
+}
+```
