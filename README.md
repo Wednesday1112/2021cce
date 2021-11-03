@@ -161,3 +161,97 @@ int main()
     }///怪怪的,可以從基礎型走過來
 }
 ```
+
+# 第八週
+## 階層總和
+```C
+#include <stdio.h>
+int main()
+{
+	int n,i,sum=0,now=1;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		now*=i;
+		sum+=now;
+	}
+	printf("%d",sum);
+}
+```
+
+## 判質數
+
+```C
+#include <stdio.h>
+int main()
+{
+    ///想知道 100以下的全部質數
+    int now,i;
+    for(now=2;now<=100;now++)
+    {
+        ///全部都測,測 now 是不是質數!!!
+        ///now質數: 只有1和now可以整除
+        int bad=0;
+        for(i=2;i<now;i++)
+        {
+            if(now%i==0) bad=1;
+        }
+        if(bad==0) printf("%d ",now);///找到了!!
+    }
+}
+```
+
+## 印三角形
+```C
+#include <stdio.h>
+int main()
+{///三角形
+    printf("1: *\n");///1樓,1顆星
+    printf("2: **\n");///2樓,2顆星
+    printf("3: ***\n");///3樓,3顆星
+    printf("4: ****\n");///4樓,4顆星
+    printf("5: *****\n");///5樓,5顆星
+    printf("6: ******\n");///6樓,6顆星
+    ///高度越高，程式越多 ... ex. 40層
+
+    int n=6,i,k;
+    for(i=1;i<=n;i++)
+    {///先建出樓層，第i樓
+        printf("%d: ",i);
+        for(k=1;k<=i;k++) printf("*");
+        printf("\n",i);
+    }
+
+}
+```
+
+## 印平行四邊形
+```C
+#include <stdio.h>
+int main( void )
+{
+    int i,j;
+    int n;
+
+    printf("請輸入大小:");
+    scanf("%d",&n);
+    printf("\n");//補一個跳行
+
+	int k;
+   	for(i=1;i<=n;i++)
+   	{//step01:鷹架，樓層
+   		///printf("%d: ",i);//鷹架，第i樓
+
+   		//step03:解決空格的問題，1樓1空格，2喽2空格
+   		for(k=1;k<=i;k++) printf(" ");
+
+   		//step02:有n顆星星
+   		for(k=1;k<=n;k++) printf("*");
+   		printf("\n");//鷹架
+   	}
+
+    return 0;
+}
+```
+
+# 第十週
