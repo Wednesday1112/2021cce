@@ -255,3 +255,43 @@ int main( void )
 ```
 
 # 第十週
+## 陣列
+```C
+#include <stdio.h>
+int main()
+{
+    int d[3]={100,200,300};
+    printf("d[0]:%d\n",d[0]);
+    printf("d[1]:%d\n",d[1]);
+    printf("d[2]:%d\n",d[2]);
+    
+    int f[3]={100,200,300};
+    for(int i=0;i<3;i++)
+    {
+        printf("f[%d]:%d\n",i,f[i]);
+    }
+}
+```
+## 質數個數(篩子法)
+```C
+#include <stdio.h>///7個0,一千萬
+int a[10000000]={ };///0:安全,1殺
+        ///沒寫的會補0
+int main()
+{
+    int ans=0;
+    for(int i=2;i<10000000;i++)
+    {
+        if(a[i]==0)///第i個數沒有被殺掉
+        {
+            ans++;///找到一個王子i沒死
+            ///找到國王i了!! 把他的兄弟殺掉
+            for(int k=i+i;k<10000000;k=k+i)
+            {
+                a[k]=1;///殺掉
+            }
+        }
+    }
+    printf("Ans:%d",ans);
+}
+```
