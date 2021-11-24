@@ -295,3 +295,56 @@ int main()
     printf("Ans:%d",ans);
 }
 ```
+
+# 第十一週
+## 列出前n個質數
+```C
+#include <stdio.h>
+int a[10000000];
+int main()
+{
+	int Q,i,k;
+	printf("請問你想要幾個質數? (最大的質數不超過10000000, 請給小一點) ");
+	scanf("%d",&Q);
+	int ans=0;
+	for(i=2;ans<=Q;i++)
+	{
+		if(a[i]==0)
+		{
+			ans++;
+			printf("%d ",i);
+			for(k=i+i;k<10000000;k+=i)
+		    {
+                a[k]=1;
+		    }
+		}
+	}
+	///printf("%d\n",ans);
+}
+```
+## 泡泡排序法
+```C
+#include <stdio.h>
+int a[10]={9,8,7,6,5,4,3,2,1,0};
+int main()
+{
+    for(int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for(int k=0;k<10;k++)
+    {
+        for(int i=0;i<10-1;i++)
+        {
+            if(a[i]>a[i+1])
+            {
+                int temp=a[i];
+                a[i]=a[i+1];
+                a[i+1]=temp;
+            }
+        }
+        for(int i=0;i<10;i++) printf("%d ",a[i]);
+        printf("\n");
+    }
+}
+```
+
+# 第十二週
