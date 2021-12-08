@@ -374,4 +374,24 @@ int main()
 ```
 
 # 第十三週
-## 
+## 自訂函式
+```C
+#include <stdio.h>
+void printStar(int n)   ///void不用回傳,so不用return
+{
+    for(int i=0;i<n;i++) printf("*");
+}
+void printSpace(int n)
+{
+    for(int i=0;i<n;i++) printf(" ");
+}
+int main()
+{
+    for(int i=1;i<10;i++)
+    {
+        printSpace(9-i);
+        printStar(i);
+        printf("\n");
+    }
+}
+```
