@@ -454,3 +454,58 @@ int main()
 ```
 
 # 第十五週
+## 最大公因數
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	int ans=1;
+	for(int i=1;i<=a;i++)
+	{
+		if(a%i==0&&b%i==0) ans=i;
+	}
+	printf("%d",ans);
+	return 0;
+}
+```
+## 輾轉相除
+```C
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int c=a%b;
+    printf("a大的%d b中的%d c小的%d\n",a,b,c);
+    while(1)
+    {
+        if(c==0) break;
+        a=b;
+        b=c;
+        c=a%b;
+        printf("a大的%d b中的%d c小的%d\n",a,b,c);
+    }
+    printf("%d",b);
+}
+```
+## 用函式叫函式(輾轉相除)
+```C
+#include <stdio.h>
+int box(int a,int b)
+{
+    if(a==0)return b;
+    if(b==0)return a;
+    return box(b,a%b);
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int ans=box(a,b);
+    printf("%d",ans);
+}
+```
+
+# 第十六週
