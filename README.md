@@ -513,7 +513,7 @@ int main()
 ```C
 #include <stdio.h>
 #include <string.h>
-char line[3000]; ///字串的陣列
+char line[3000]; ///字串的陣列  ///字串的字尾固定為\0
 int main()
 {
 	scanf("%s",line); ///%s為字串專用，且後面不用 & 來代表輸入
