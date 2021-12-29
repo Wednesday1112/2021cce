@@ -509,3 +509,21 @@ int main()
 ```
 
 # 第十六週
+## 判斷迴文(字串)
+```C
+#include <stdio.h>
+#include <string.h>
+char line[3000]; ///字串的陣列
+int main()
+{
+	scanf("%s",line); ///%s為字串專用，且後面不用 & 來代表輸入
+	int n=strlen(line); ///算字串長度
+	int bad=0;
+	for(int i=0;i<n;i++)
+	{
+		if(line[i]!=line[n-1-i]) bad=1;
+	}
+	if(bad==0) printf("YES");
+	else printf("NO");
+}
+```
